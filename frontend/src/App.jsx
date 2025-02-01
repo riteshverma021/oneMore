@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-
-
 import axios from "axios";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useBaseURL } from "./Context/ContextApi";
+
 const App = () => {
-   const BASE_URL = useBaseURL()
+  const BASE_URL = useBaseURL();
   const navigate = useNavigate();
   const [cookies] = useCookies(["admin"]);
   const [data, setData] = useState([]);
@@ -53,11 +52,9 @@ const App = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-     
-
-     
-      <div className="luckydraw text-center my-12">
-        <h1 className="text-4xl font-bold text-blue-500 animate-twinkle">
+      {/* Lucky Draw Section */}
+      <div className="luckydraw text-center my-12 container mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-500 animate-twinkle">
           Lucky Draw Scheme
         </h1>
         {loading ? (
@@ -92,7 +89,7 @@ const App = () => {
       </div>
 
       {/* Items Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-12 container mx-auto">
         {loading ? (
           <div className="col-span-full text-center py-6 text-gray-500">
             Loading items...
@@ -126,7 +123,7 @@ const App = () => {
         )}
       </div>
 
-
+      {/* Admin Portal Toggle */}
       {getAdminPortal && (
         <div className="flex justify-center items-center my-4">
           <label
@@ -143,7 +140,6 @@ const App = () => {
           />
         </div>
       )}
-
     </div>
   );
 };
