@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h3 className="text-lg font-bold mb-3">Contact Info</h3>
-        <p>Phone: 9466539953</p>
+        <p>Phone: 946653995</p>
         
       </div>
       <div>
