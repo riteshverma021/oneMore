@@ -3,6 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
+<<<<<<< HEAD
     <footer className="mt-20 bg-gray-800 text-white py-8" id="footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {/* Contact Info */}
@@ -10,6 +11,13 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-3">Contact Info</h3>
           <p className="text-sm">Phone: 9466539953</p>
         </div>
+=======
+    <footer  className="id=footer mt-20 bg-gray-800 text-white py-8">
+    <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 className="text-lg font-bold mb-3">Contact Info</h3>
+        <p>Phone: 9466539953</p>
+>>>>>>> 9d7e4afb2817bcf4bf99b28ca6fd298b0162e486
         
         {/* Address */}
         <div>
@@ -43,4 +51,8 @@ const Footer = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer
+>>>>>>> 9d7e4afb2817bcf4bf99b28ca6fd298b0162e486
