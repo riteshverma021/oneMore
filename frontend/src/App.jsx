@@ -53,8 +53,8 @@ const App = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Lucky Draw Section */}
-      <div className="luckydraw text-center my-12 container mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold text-blue-500 animate-twinkle">
+      <div className="luckydraw text-center my-12 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-500 animate-twinkle">
           Lucky Draw Scheme
         </h1>
         {loading ? (
@@ -64,7 +64,7 @@ const App = () => {
             <img
               src={`${BASE_URL}/${scheme.image.url}`}
               alt="Lucky Draw Scheme"
-              className="mx-auto mt-6 rounded-lg shadow-lg max-w-md"
+              className="mx-auto mt-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md"
             />
           )
         )}
@@ -75,7 +75,7 @@ const App = () => {
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="bg-amber-500 text-white px-6 py-3 rounded-full shadow-xl border-2 border-amber-600 focus:ring-4 focus:ring-amber-300 hover:bg-amber-400 transition duration-300 ease-in-out text-sm sm:text-base md:text-lg"
+          className="bg-amber-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl border-2 border-amber-600 focus:ring-4 focus:ring-amber-300 hover:bg-amber-400 transition duration-300 ease-in-out text-sm sm:text-base md:text-lg"
         >
           <option value="all">All Categories</option>
           <option value="rings">Rings</option>
@@ -89,7 +89,7 @@ const App = () => {
       </div>
 
       {/* Items Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-12 container mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 sm:px-8 lg:px-12">
         {loading ? (
           <div className="col-span-full text-center py-6 text-gray-500">
             Loading items...
@@ -105,12 +105,14 @@ const App = () => {
                 alt={item.name}
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 group-hover:text-amber-600 transition-colors duration-300">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-amber-600 transition-colors duration-300">
                   {item.name}
                 </h3>
-                <p className="text-gray-500 mt-2 text-sm">{item.description}</p>
-                <p className="text-amber-500 font-bold text-lg mt-4">
+                <p className="text-sm sm:text-base text-gray-500 mt-2">
+                  {item.description}
+                </p>
+                <p className="text-amber-500 font-bold text-base sm:text-lg mt-4">
                   ₹{item.price}
                 </p>
               </div>
@@ -125,10 +127,10 @@ const App = () => {
 
       {/* Admin Portal Toggle */}
       {getAdminPortal && (
-        <div className="flex justify-center items-center my-4">
+        <div className="flex justify-center items-center my-4 px-4">
           <label
             htmlFor="admin"
-            className="text-gray-800 font-medium text-lg mr-4"
+            className="text-gray-800 font-medium text-base sm:text-lg mr-4"
           >
             Admin Portal
           </label>
