@@ -64,7 +64,7 @@ const App = () => {
             <img
               src={`${BASE_URL}/${scheme.image.url}`}
               alt="Lucky Draw Scheme"
-              className="mx-auto mt-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md"
+              className="mx-auto mt-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md lg:max-w-lg"
             />
           )
         )}
