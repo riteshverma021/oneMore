@@ -20,11 +20,7 @@ const port = 1002
 
 //middlewares 
 const allowedOrigins = [process.env.FRONTEND_URL];
-app.use(cors({
-    origin:allowedOrigins ,
-
-    credentials:true
-}))
+app.use(cors())
 
 //for parsing the data
 app.use(express.json());
